@@ -1,0 +1,52 @@
+.bg-primario{
+    background-color: #00344A;
+}
+
+.text-primario{
+    color: #00344A;
+}
+
+.bg-secundario{
+    background-color: #E5B979;
+}
+
+.bg-terciario{
+    background-color: #F2F2F2;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.button-primario{
+    text-decoration: none;
+    color: #00344A;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ingredients{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #F2F2F2;
+}
+
+.price{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #E5B979;
+}
+
+.nombre_producto{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffff;
+}
+  
+  
