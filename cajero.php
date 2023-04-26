@@ -1,5 +1,5 @@
 <?php 
 
-echo "cajero";
+echo "cajero...En construccion";
 
 ?>

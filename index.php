@@ -8,14 +8,15 @@
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    <link rel="stylesheet" href="assets/estilos.css">
 
-   <title>Document</title>
+   <title>Restaurante</title>
+   
 </head>
 <body>
 
-<?php @include "components/nav.php" ; ?>
-<?php @include "components/nosotros.php" ; ?>
-<?php @include "components/menu.php" ; ?>
-
+<?php @include "includes/nav.php" ; ?>
+<?php @include "includes/nosotros.php" ; ?>
+<?php @include "includes/menu.php" ; ?>
+<?php @include "includes/contactenos.php" ; ?>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>

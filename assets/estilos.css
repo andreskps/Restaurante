@@ -48,5 +48,11 @@
     font-weight: 700;
     color: #ffff;
 }
-  
+
+.hover-link:hover{
+    text-decoration: underline;
+    background-color: #00344A;
+    transition: 0.3s;
+
+}
   
