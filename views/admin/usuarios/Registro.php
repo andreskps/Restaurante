@@ -1,21 +1,9 @@
 <?php
-include("../Clases/Usuario.php");
-
-$usuario = new Usuario();
-
-if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['Documento']) && isset($_POST['telefono']) && isset($_POST['correo']) && isset($_POST['clave']) && isset($_POST['IdRol'])) {
-
-    $usuario->setNombre($_POST['nombre']);
-    $usuario->setApellido($_POST['apellido']);
-    $usuario->setCedula($_POST['Documento']);
-    $usuario->setTelefono($_POST['telefono']);
-    $usuario->setCorreo($_POST['correo']);
-    $usuario->setClave($_POST['clave']);
-    $usuario->setRol($_POST['IdRol']);
-
-    $respuestas = $usuario->RegistrarUser();
-}
-
+require_once('C:\xampp\htdocs\Restaurante\controllers\UsuarioController.php');
+    if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['Documento']) && isset($_POST['telefono']) && isset($_POST['correo']) && isset($_POST['clave']) && isset($_POST['IdRol'])) {
+        $usuarioController = new UsuarioController();
+        $usuarioController->create(); //llamamos la funcion create del controlador
+    }
 ?>
 
 
@@ -35,9 +23,7 @@ if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['Docume
         }
         ?>
         <h1 class="fw-bold text-primario font-monospace text-center">Crear Usuario</h1>
-        <form action="#" method="post" class="m-auto">
-
-
+        <form action="" method="post" class="m-auto">
 
             <div class="d-flex gap-4">
                 <div class="form-outline mb-4">
@@ -78,7 +64,7 @@ if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['Docume
             <div class="form-outline mb-4">
                 <label for="IdRol" class="form-label fw-bold text-primario font-monospace">Rol</label>
                 <?php
-                include_once("../Clases/Usuario.php");
+                include_once("../../../models/Usuario.php");
                 $usuario = new Usuario();
 
                 echo "<select name='IdRol'>";
@@ -88,11 +74,8 @@ if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['Docume
                 echo "</select>";
                 ?>
             </div>
-
-
             <input type="submit" class="button-primario bg-primario text-white" value="Registrar Usuario">
         </form>
     </div>
-
 
 </main>

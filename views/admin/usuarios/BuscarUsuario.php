@@ -1,25 +1,22 @@
 <?php
-require("../Clases/Usuario.php");
-$usuario = new Usuario();
+ require 'C:\xampp\htdocs\Restaurante\controllers\UsuarioController.php';
 
-if (isset($_POST['campo']) && isset($_POST['valor'])) {
-    // Preparar la consulta SQL con los valores recibidos
-    $campo = $_POST['campo'];
-    $valor = $_POST['valor'];
-    $registros = $usuario->searchUserF($campo, $valor);
-}
-if (empty($_POST['valor'])) {
-    $registros = $usuario->searchUser();
-}
+    $usuario = new UsuarioController();
+    $registros = $usuario->index(); //busca todos los usuarios
+    //en caso de que hayan dado parametros de busqueda
+    if(isset($_POST['campo']) && isset($_POST['valor'])){
+        $registros = $usuario->search($_POST['campo'], $_POST['valor']); //busca los usuarios segun los parametros
+    }
+
 ?>
     <main class="d-flex ">
 
-        <?php include '../includes/head.php'; ?>
-        <?php include '../admin.php'; ?>
+        <?php include 'C:\xampp\htdocs\Restaurante\includes\head.php'; ?>
+        <?php include 'C:\xampp\htdocs\Restaurante\views\admin\admin.php'; ?>
 
         <div class="container-fluid d-flex flex-column justify-content-center m-auto">
             <!-- Formulario para seleccionar el campo y el valor -->
-            <form class="form-inline" method="POST">
+            <form class="form-inline" method="POST" action="#">
                 <div class="form-group">
                     <label for="campo">Buscar por:</label>
                     <select class="form-control" id="campo" name="campo">

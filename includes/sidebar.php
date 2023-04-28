@@ -9,7 +9,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li>
-        <a href="/Restaurante/admin.php" class="nav-link text-white">
+        <a href="/Restaurante/views/admin/admin.php" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Inicio
         </a>
@@ -20,8 +20,8 @@
             Usuarios
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
-            <a class="dropdown-item " href="/Restaurante/components/Registro.php">Crear Usuario</a>
-            <a class="dropdown-item" href="/Restaurante/components/BuscarUsuario.php">Buscar Usuario</a>
+            <a class="dropdown-item " href="/Restaurante/views/admin/usuarios/Registro.php">Crear Usuario</a>
+            <a class="dropdown-item" href="/Restaurante/views/admin/usuarios/BuscarUsuario.php">Buscar Usuario</a>
           </ul>
       </li>
     </ul>

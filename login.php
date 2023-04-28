@@ -1,39 +1,16 @@
 <?php
-require 'Clases/db.php';
-include_once 'Clases/Usuario.php';
+require 'config/db.php';
+require 'controllers/UsuarioController.php';
 
 $errores = array();
-session_start();
+// session_start();
 
-// if (isset($_SESSION['IdRol'])) {
-//     switch ($_SESSION['IdRol']) {
-//         case 1:
-//             header('location: admin.php');
-//             break;
 
-//         case 2:
-//             header('location: mesero.php');
-//             break;
-//         case  3:
-//             header('location: cajero.php');
-//             break;
-
-//         case 4:
-//             header('location: chef.php');
-//             break;
-
-//         default:
-//     }
-// }
-
+$usuario = new UsuarioController();
 if (isset($_POST['correo']) && isset($_POST['clave'])) {
 
-
-
-    $usuario = new Usuario();
-    $usuario->setCorreo($_POST['correo']);
-    $usuario->setClave($_POST['clave']);
-    $usuario->Login();
+    $usuario = new UsuarioController();
+    $respuesta =$usuario->login();
 }
 
 ?>
@@ -55,8 +32,10 @@ if (isset($_POST['correo']) && isset($_POST['clave'])) {
 
                     <div class="alert alert-danger text-center alerta" role="alert">
                         <?php
-                        if (isset($usuario)) {
-                            echo $usuario->getError();
+                        if (isset($usuario) && isset($respuesta)) {
+                        
+                                echo "Usuario o contraseña incorrectos";
+                        
                         }
                         ?>
                     </div>

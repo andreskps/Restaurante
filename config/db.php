@@ -6,7 +6,7 @@ class DataBase{
         $user= 'root';
         $pass= '';
         $db= 'restaurantebd';
-        $db = new mysqli( $host,$user,$pass,$db);
+        $db = new mysqli($host,$user,$pass,$db);
         
         if($db){
             // echo "Connecting to database";
