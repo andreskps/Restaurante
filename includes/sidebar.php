@@ -24,6 +24,16 @@
             <a class="dropdown-item" href="/Restaurante/views/admin/usuarios/BuscarUsuario.php">Buscar Usuario</a>
           </ul>
       </li>
+
+      <li>
+        <a href="#" class="nav-link text-white dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+          Productos
+        </a>
+        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
+          <a class="dropdown-item " href="/Restaurante/views/admin/productos/Registro.php">Crear Producto</a>
+          <a class="dropdown-item" href="/Restaurante/views/admin/productos/BuscarProductos.php">Buscar Producto</a>
+        </ul>
     </ul>
     <hr>
     <div class="dropdown">

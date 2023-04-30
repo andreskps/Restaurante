@@ -73,7 +73,7 @@
     {
       $usuario = new Usuario();
 
-      // Preparar la consulta SQL con los valores recibidos
+     
 
       return $registros = $usuario->searchUserF($campo, $valor);
     }

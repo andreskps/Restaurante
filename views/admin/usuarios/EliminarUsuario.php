@@ -1,6 +1,6 @@
 <?php
 $idUsuario = $_GET['id']; //obtenemos el id de la url
-include_once('C:\xampp\htdocs\Restaurante\controllers\UsuarioController.php');
+require_once('C:\xampp\htdocs\Restaurante\controllers\UsuarioController.php');
 $usuarioController = new UsuarioController();
 if (isset($_POST['id'])) {
     $usuarioController->delete();
