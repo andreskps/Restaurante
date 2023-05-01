@@ -132,6 +132,7 @@ class Usuario
 
         if ($row) {
             $rol = $row['IdRol'];
+            session_start();
             $_SESSION['IdRol'] = $rol;
             switch ($_SESSION['IdRol']) {
                 case 1:
@@ -146,7 +147,7 @@ class Usuario
                     break;
 
                 case 4:
-                    header('location: chef.php');
+                    header('location: /Restaurante/views/chef/chef.php');
                     break;
 
                 default:
@@ -156,12 +157,6 @@ class Usuario
         }
     }
 
-    public function cerrarSesion()
-    {
-        session_start();
-        session_unset();
-        session_destroy();
-    }
 
     public function SelectRoles()
     {

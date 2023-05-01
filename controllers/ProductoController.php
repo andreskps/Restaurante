@@ -10,7 +10,7 @@ class ProductosController
     $this->model = new Productos();
   }
 
-  public function index()
+  public function index() //noa trae todos los productos
   {
     $registros = $this->model->searchProduct();
     return $registros;

@@ -10,7 +10,12 @@
 </head>
 
 <body>
-	<div class="container">
+
+<main class="d-flex">
+
+ <?php @include 'C:\xampp\htdocs\Restaurante\views\chef/chef.php' ?>
+
+<div class="container">
 		<h1 class="my-4">Lista de Pedidos</h1>
 		<table class="table">
 			<thead class="bg-primario text-white">
@@ -78,7 +83,7 @@
 						echo "</form></td>";
 						echo "<td>";
 						echo "<a href='CancelarPedido.php?id=" . $row["id"] . "' class='btn btn-eliminar btn-danger'>Cancelar</a>";
-						echo "<a href='CalcularTotal.php?id=" . $row["id"] . "' class='btn btn-calcular'>Precio total</a>";
+						echo "<a href='CalcularTotal.php?id=" . $row["id"] . "' class='btn btn-calcular btn-success mx-1'>Precio total</a>";
 
 						echo "</td>";
 						echo "</tr>";
@@ -93,6 +98,9 @@
 			</tbody>
 		</table>
 	</div>
+
+</main>
+
 	<!--<script src="/restaurante/scripts/comprobarEstado.js"></script>-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

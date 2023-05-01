@@ -5,9 +5,20 @@
 <?php include 'C:\xampp\htdocs\Restaurante\includes\head.php'; ?>
 
 <body>
-   <?php include 'C:\xampp\htdocs\Restaurante\includes\sidebar.php'; ?>
+
+
+
    <?php
+   //valide que el rol de la sesion sea el 4
    session_start();
+   if (isset($_SESSION['IdRol']) != 1) {
+      header("Location: /Restaurante/login.php");
+   }
+   ?>
+
+
+   <?php include 'C:\xampp\htdocs\Restaurante\includes\sidebarAdmin.php'; ?>
+   <?php
    if (isset($_SESSION['ultimo_acceso']) && (time() - $_SESSION['ultimo_acceso'] > 300)) { //60 es un minuto para probar, para los 5 minutos se debe poner 300
       // Si han pasado más de 5 minutos desde el último acceso, redirecciona a la página de inicio de sesión y cierra la sesión
       session_unset();

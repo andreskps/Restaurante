@@ -77,6 +77,13 @@
 
       return $registros = $usuario->searchUserF($campo, $valor);
     }
+
+    public function cerrarSesion()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+    }
   }
 
   ?>

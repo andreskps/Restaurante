@@ -1,3 +1,5 @@
+
+
 <div class="d-flex flex-column p-3 text-white bg-primario vh-100 " style="width: 280px;">
     <img
       src="/Restaurante/assets/img/logo (2).png"
@@ -45,7 +47,7 @@
         <li><a class="dropdown-item" href="#">Perfil</a></li>
         <li><hr class="dropdown-divider"></li>
         <li>
-            <a class="dropdown-item" href="../logout.php">Cerrar Sesión</a>
+            <a class="dropdown-item" href="/Restaurante/logout.php">Cerrar Sesión</a>
 
         </li>
       </ul>

@@ -23,7 +23,7 @@ if (isset($_POST['nombre']) && isset($_POST['descripcion']) && isset($_POST['pre
             echo " <div class='alert alert-danger text-center'> Producto No Registrado</div> ";
         }
         ?>
-        <h1 class="fw-bold text-primario font-monospace text-center">Crear Usuario</h1>
+        <h1 class="fw-bold text-primario font-monospace text-center">Crear Productos</h1>
         <form action="" method="post" class="m-auto" enctype="multipart/form-data">
 
             <div class="d-flex gap-4">

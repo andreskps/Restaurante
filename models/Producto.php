@@ -68,9 +68,10 @@ class Productos
     {
         $sql = "INSERT INTO productos VALUES(NULL, '{$this->getNombre()}', '{$this->getDescripcion()}', '{$this->getPrecio()}', '{$this->getRutaImg()}')";
         $save = $this->db->query($sql);
-        $result = false;
         if ($save) {
             $result = true;
+        }else{
+            $result = false;
         }
         return $result;
     }
