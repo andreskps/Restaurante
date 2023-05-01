@@ -54,7 +54,7 @@ if (isset($_POST['nombre']) && isset($_POST['descripcion']) && isset($_POST['pre
                 </div>
 
                 <div class="d-flex gap-4 mx-auto">
-                    <img src="<?php echo "/Restaurante/assets/img/productos/{$campos['ruta_img']}"; ?>" alt="producto" class="img-fluid m-auto">
+                    <img src="<?php echo "/Restaurante/assets/img/productos/{$campos['ruta_img']}"; ?>" alt="producto" class="img-fluid m-auto" width="200px" height="200px">
 
                 </div>
                 <div class="d-flex justify-content-center">
